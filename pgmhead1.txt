@@ -1,0 +1,42 @@
+     1	
+     2	/*
+     3	Program Name: 
+     4	Function:
+     5	Input:
+     6	Output:
+     7	*/
+     8	
+     9	/* Define include function */
+    10	#include<stdio.h>
+    11	#include<stdlib.h>
+    12	#include<string.h>
+    13	
+    14	#define max 50
+    15	
+    16	struct Student{
+    17		char ActFlag[2];     /* initiial value = y\0; suspend = n\0 */
+    18		char StudentID[9];   /* initial value = D9999999\0 */
+    19		char StudentName[21]; /* initial value =all 'x' \0 */
+    20		int TotCoursePoints; /* initial value = 0 */
+    21		int TotCredits;	    /* initial value =0 */
+    22		float Average; 	   /* initial value = 0.00 */
+    23		struct Course *FirstCourse; /*initial value = NULL */
+    24	};
+    25	
+    26	/* struct Student a[max]; */
+    27	
+    28	struct Course{
+    29		struct Course *NextCourse;
+    30		char CourseCode[10];
+    31		int Score;
+    32	};
+    33	
+    34	void initial(struct Student c[]);
+    35	void print_all(struct Student c[]);
+    36	void load(struct Student c[]);
+    37	void GroupInsert(struct Student c[]);
+    38	int NameSearch(char[],struct Student c[]);
+    39	void suspend(struct Student c[]);
+    40	void average(struct Student c[]);
+    41	void Print_Ind(struct Student c[]);
+    42	void freenode(struct Student c[]);

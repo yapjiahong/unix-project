@@ -1,0 +1,36 @@
+     1	
+     2	OBJS=	main.o initial.o printall.o load.o grpinsert.o search.o suspend.o avg.o\
+     3	PrintInd.c freenode.c
+     4	
+     5	run:	$(OBJS)
+     6		gcc $(OBJS) -o hm1
+     7	
+     8	main.o: main.c
+     9		gcc -c main.c
+    10	
+    11	initial.o: initial.c
+    12		gcc -c initial.c
+    13	
+    14	printall.o: printall.c
+    15		gcc -c printall.c
+    16	
+    17	load.o: load.c
+    18		gcc -c load.c
+    19	
+    20	grpinsert.o: grpinsert.c
+    21		gcc -c grpinsert.c
+    22	
+    23	search.o: search.c
+    24		gcc -c search.c
+    25	
+    26	suspend.o: suspend.c
+    27		gcc -c suspend.c
+    28	
+    29	avg.o:	avg.c
+    30		gcc -c avg.c
+    31	
+    32	PrintInd.o: PrintInd.c
+    33		gcc -c PrintInd.c
+    34	
+    35	freenode.o: freenode.c
+    36		gcc -c freenode.c
